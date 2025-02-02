@@ -1,21 +1,26 @@
 import argparse
 
 
-def init():   
+def init():
 
-    global args 
+    global args
 
     example_text = '''examples:
     python3 %(prog)s --help    
-    python3 %(prog)s --test --fileName 'temp/test.pdf'    
+    python3 %(prog)s --test --fileName 'temp/test.pdf'
+    python3 %(prog)s --configs 
     '''
 
     parser = argparse.ArgumentParser(description='Helper for creating pdf files.',
                                      epilog=example_text,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-       
-    parser.add_argument('--test', action='store_true', help='Create a test pdf file.')
+
+    parser.add_argument('--test', action='store_true',
+                        help='Create a test pdf file.')
 
     parser.add_argument('--fileName', type=str, help='Name of file.')
-    
+
+    parser.add_argument('--configs', action='store_true',
+                        help='Show configurations.')
+
     args = parser.parse_args()

@@ -1,7 +1,8 @@
 from fpdf import FPDF
 
+
 def CreateTestPdfFile(fileName: str):
-   
+
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font('Helvetica', size=12)
