@@ -6,9 +6,11 @@ def init():
     global args
 
     example_text = '''examples:
-    python3 %(prog)s --help    
+    python3 %(prog)s --help
     python3 %(prog)s --test --fileName 'temp/test.pdf'
-    python3 %(prog)s --configs 
+    python3 %(prog)s --configs
+    python3 %(prog)s --report 'employee'
+    python3 %(prog)s --getSqlServerDriver
     '''
 
     parser = argparse.ArgumentParser(description='Helper for creating pdf files.',
@@ -22,5 +24,10 @@ def init():
 
     parser.add_argument('--configs', action='store_true',
                         help='Show configurations.')
+
+    parser.add_argument('--report', type=str, help='Get report.')
+
+    parser.add_argument('--getSqlServerDriver', action='store_true',
+                        help='Detect Sql server driver.')
 
     args = parser.parse_args()

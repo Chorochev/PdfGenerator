@@ -3,19 +3,23 @@ import configparser
 
 def InitConfigurations():
 
-    global configuration
+    global CONFIGURATION
 
     file_path = 'config.ini'
 
     with open(file_path, 'r') as file:
         file_content = file.read()
 
-    configuration = configparser.ConfigParser(allow_no_value=True)
-    configuration.read_string(file_content)
+    CONFIGURATION = configparser.ConfigParser(allow_no_value=True)
+    CONFIGURATION.read_string(file_content)
 
 
 def ShowConfigurations():
 
     print('[CONNECTION_STRING]')
-    print('server: ' + configuration.get('CONNECTION_STRING', 'server'))
-    print('database: ' + configuration.get('CONNECTION_STRING', 'database'))
+    print('driver: ' + CONFIGURATION.get('CONNECTION_STRING', 'driver'))
+    print('server: ' + CONFIGURATION.get('CONNECTION_STRING', 'server'))
+    print('database: ' + CONFIGURATION.get('CONNECTION_STRING', 'database'))
+    print('[SQL_QUERIES]')
+    print('employee_view_sql: ' +
+          CONFIGURATION.get('SQL_QUERIES', 'employee_view_sql'))
