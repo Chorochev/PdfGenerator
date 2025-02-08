@@ -5,6 +5,7 @@ from src.configuration import InitConfigurations
 from src.configuration import ShowConfigurations
 from src.tsql.employee_view import GetEmployees
 from src.tsql.connect import GetSqlServerDriver
+from src.pdf.document import PDF
 
 commands.init()
 
@@ -32,3 +33,12 @@ if (commands.args.report):
         # print()
         for r in records:
             print(f"{r.BusinessEntityID}\t{r.FirstName}\t{r.LastName}")
+
+if (commands.args.testPdf):
+    pdf = PDF()
+    pdf.add_page()
+    pdf.set_font("Times", size=12)
+    for i in range(1, 41):
+        pdf.cell(
+            0, 10, f"Printing line number {i}", new_x="LMARGIN", new_y="NEXT")
+    pdf.output("./temp/new-tuto2.pdf")

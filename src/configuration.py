@@ -23,3 +23,6 @@ def ShowConfigurations():
     print('[SQL_QUERIES]')
     print('employee_view_sql: ' +
           CONFIGURATION.get('SQL_QUERIES', 'employee_view_sql'))
+    print('[REPORT]')
+    print('default_font: ' + CONFIGURATION.get('REPORT', 'default_font'))
+    print('font_size: ' + CONFIGURATION.get('REPORT', 'font_size'))

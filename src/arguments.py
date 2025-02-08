@@ -11,6 +11,7 @@ def init():
     python3 %(prog)s --configs
     python3 %(prog)s --report 'employee'
     python3 %(prog)s --getSqlServerDriver
+    python3 %(prog)s --testPdf
     '''
 
     parser = argparse.ArgumentParser(description='Helper for creating pdf files.',
@@ -29,5 +30,8 @@ def init():
 
     parser.add_argument('--getSqlServerDriver', action='store_true',
                         help='Detect Sql server driver.')
+
+    parser.add_argument('--testPdf', action='store_true',
+                        help='Create test pdf.')
 
     args = parser.parse_args()
