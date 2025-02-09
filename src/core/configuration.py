@@ -17,12 +17,12 @@ def InitConfigurations():
 def ShowConfigurations():
 
     print('[CONNECTION_STRING]')
-    print('driver: ' + CONFIGURATION.get('CONNECTION_STRING', 'driver'))
-    print('server: ' + CONFIGURATION.get('CONNECTION_STRING', 'server'))
-    print('database: ' + CONFIGURATION.get('CONNECTION_STRING', 'database'))
+    print(' driver: ' + CONFIGURATION.get('CONNECTION_STRING', 'driver'))
+    print(' server: ' + CONFIGURATION.get('CONNECTION_STRING', 'server'))
+    print(' database: ' + CONFIGURATION.get('CONNECTION_STRING', 'database'))
     print('[SQL_QUERIES]')
-    print('employee_view_sql: ' +
+    print(' employee_view_sql: ' +
           CONFIGURATION.get('SQL_QUERIES', 'employee_view_sql'))
     print('[REPORT]')
-    print('default_font: ' + CONFIGURATION.get('REPORT', 'default_font'))
-    print('font_size: ' + CONFIGURATION.get('REPORT', 'font_size'))
+    print(' default_font: ' + CONFIGURATION.get('REPORT', 'default_font'))
+    print(' font_size: ' + CONFIGURATION.get('REPORT', 'font_size'))

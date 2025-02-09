@@ -1,5 +1,5 @@
 from src.tsql.connect import GetConnection
-import src.configuration as config
+import src.core.configuration as config
 
 
 def GetEmployees():
