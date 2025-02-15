@@ -20,7 +20,10 @@ class EmployeeReport(FPDF):
         for r in records:
             self.set_font("Times", size=12)  # Setting font: Times 12
             # Printing justified text:
-            self.multi_cell(0, 5, f"{r.BusinessEntityID}\t{r.FirstName}\t{r.LastName}")
+            strTitle = f"'{r.BusinessEntityID}\t{r.FirstName}\t{r.LastName}'"
+            strWidth = self.get_string_width(strTitle)
+            strTitle += f"\t (Width={strWidth})"
+            self.multi_cell(0, 5, strTitle)
             self.ln()  # Performing a line break
 
     def create(self, records, filepath):

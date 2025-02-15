@@ -10,6 +10,7 @@ def init():
     python3 %(prog)s --test --fileName 'temp/test.pdf'
     python3 %(prog)s --configs
     python3 %(prog)s --report 'employee'
+    python3 %(prog)s --report 'simple_table'
     python3 %(prog)s --getSqlServerDriver
     '''
 

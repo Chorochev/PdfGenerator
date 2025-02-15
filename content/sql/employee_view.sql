@@ -1,4 +1,4 @@
-SELECT TOP (10) [BusinessEntityID]
+SELECT TOP (100) [BusinessEntityID]
       ,[Title]
       ,[FirstName]
       ,[MiddleName]
