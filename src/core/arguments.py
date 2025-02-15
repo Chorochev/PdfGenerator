@@ -12,6 +12,7 @@ def init():
     python3 %(prog)s --report 'employee'
     python3 %(prog)s --report 'simple_table1'
     python3 %(prog)s --report 'simple_table2'
+    python3 %(prog)s --report 'simple_table3'
     python3 %(prog)s --getSqlServerDriver
     '''
 

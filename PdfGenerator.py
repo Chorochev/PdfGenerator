@@ -8,6 +8,7 @@ from src.report.EmployeeReport import EmployeeReport
 from src.tsql.employee_view import GetEmployees
 from src.report.TestReport1 import SimpleTable as TestReport01
 from src.report.TestReport2 import SimpleTable as TestReport02
+from src.report.TestReport3 import SimpleTable as TestReport03
 
 commands.init()
 
@@ -41,3 +42,7 @@ if (commands.args.report):
 if (commands.args.report):
     if (commands.args.report == 'simple_table2'):
         TestReport02("./temp/SimpleTable2.pdf")
+
+if (commands.args.report):
+    if (commands.args.report == 'simple_table3'):
+        TestReport03("./temp/SimpleTable3.pdf")
