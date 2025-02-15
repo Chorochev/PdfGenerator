@@ -6,7 +6,8 @@ from src.core.configuration import ShowConfigurations
 from src.tsql.connect import GetSqlServerDriver
 from src.report.EmployeeReport import EmployeeReport
 from src.tsql.employee_view import GetEmployees
-from src.report.TestReport import SimpleTable
+from src.report.TestReport1 import SimpleTable as TestReport01
+from src.report.TestReport2 import SimpleTable as TestReport02
 
 commands.init()
 
@@ -34,5 +35,9 @@ if (commands.args.report):
         pdf.create(records, "./temp/report1.pdf")
 
 if (commands.args.report):
-    if (commands.args.report == 'simple_table'):
-        SimpleTable(2, "./temp/SimpleTable.pdf")
+    if (commands.args.report == 'simple_table1'):
+        TestReport01(2, "./temp/SimpleTable1.pdf")
+
+if (commands.args.report):
+    if (commands.args.report == 'simple_table2'):
+        TestReport02("./temp/SimpleTable2.pdf")
